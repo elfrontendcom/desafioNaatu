@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Naatu - Tu orígen, tus bases.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+</head>
+<body>
+    <nav class="barraFixed">
+        <div class="barraPrincipal">
+            <div class="contenedor">
+                <a class="logoNaatu" href="#"><img src="img/naatu-logo.png" alt="logo de naatu"></a>
+                <div class="busquedaMobile">
+                    <a class="buscarBarraPrincipal" id="buscarBarraPrincipal" onclick="navBuscar()">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a class="hamburguesa" id="hamburguesa" onclick="navResponsive()">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="desplegables">
+            <div class="buscador" id="buscador">
+                <div class="contenedor">
+                    <form action="">
+                        <input type="text" placeholder="BUSCAR">
+                    </form>
+                </div>
+            </div>
+            <div class="menu" id="menu">
+                <ul class="listaMenu">
+                    <li><a href="#">INSPIRACIÓN</a></li>
+                    <li><a href="#">PRODUCTOS</a></li>
+                    <li><a href="#">PREPARACIONES</a></li>
+                    <li><a href="#">TEJIDOS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">PROGRAMA</a></li>
+                    <li><a href="#">REGISTRO</a></li>
+                </ul>
+                <div class="carritoContenedor">
+                    <div class="carrito">
+                        <img src="img/carrito.png" alt="carrito"><p>2</p>
+                    </div>
+                </div>
+                <div class="busquedaDesktop">
+                    <a class="buscarBarraPrincipal" id="buscarBarraPrincipal" onclick="navBuscar()">
+                       <i class="fas fa-search"></i>
+                    </a>
+                </div>
+                <div class="redes">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="slideshowContainer">
+            <div class="mySlides fade">
+                <img src="img/manos-que-tejen.png" class="slideDesktop" style="width:100%">
+                <img src="img/manos-que-tejen-responsive.png" class="slideResponsive" style="width:100%">
+                <div class="text">
+                    <img src="img/entre-tejidos.png" alt="entre tejidos">
+                    <p>RECONOCE TUS ORÍGENES Y<br>
+                    LOS DEL TERRITORIO EN EL QUE HABITAS</p>
+                    <a class="btnCallToAction" href="#">VER VIDEO</a>
+                </div>
+            </div>        
+            <div class="mySlides fade">
+                <img src="img/manos-que-tejen.png" class="slideDesktop" style="width:100%">
+                <img src="img/manos-que-tejen-responsive.png" class="slideResponsive" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>        
+            <div class="mySlides fade">
+                <img src="img/manos-que-tejen.png" class="slideDesktop" style="width:100%">
+                <img src="img/manos-que-tejen-responsive.png" class="slideResponsive" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <div class="contenedorFlechas">
+                <a class="prev" onclick="plusSlides(-1)"><img src="img/left.png" alt="flecha-izquierda"></a>
+                <a class="next" onclick="plusSlides(1)"><img src="img/right.png" alt="flecha-derecha"></a>
+            </div>
+        </div>
+        
+        <div style="text-align:center; position: relative; top: -70px;">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </section>
+    <div class="franja1"></div>
+    <section class="productos">
+        <div class="contenedorCorto">
+            <h1>PRODUCTOS</h1>
+            <hr class="underline">
+            <p class="textoProductos">Descubre un poco más sobre nuestra gama de productos.</p>
+            <div class="fila">
+                <div class="col-6">
+                    <div class="borde">
+                        <a href="#" class="btnImgProductos">
+                            <img src="img/avenas.png" alt="">
+                        </a>
+                        <a href="#" class="btnProductos">Avenas</a>
+                    </div>
+                    <div class="avena"></div>
+                </div>
+                
+                <div class="col-6">
+                    <div class="borde">
+                        <a href="#" class="btnImgProductos">
+                            <img src="img/granolas.png" alt="">
+                        </a>
+                        <a href="#" class="btnProductos">Granolas</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="franja2"></div>
+    <div class="granola"></div>
+    
+    <div class="platosDesktop">
+        <img src="img/granola.png" alt="plato de granola">
+        <img src="img/avena.png" alt="plato de avena">
+    </div>
+
+    <section class="preparaciones">
+        <h1>SABORES LOCALES</h1>
+        <hr class=underline2>
+        <p class="textoProductos">Aprende cocina y aliméntate con nuestras recetas y novedades culinarias</p>
+        <div class="sliderRecetas">
+            <ul class="listaSliderRecetas">
+                <li class="receta"></li>
+                <li class="receta"></li>
+                <li class="receta"></li>
+                <li class="receta"></li>
+                <li class="receta"></li>
+            </ul>
+        </div>
+    </section>
+    <div class="franja3"></div>
+    <div class="chia"></div>
+
+    <!-- Galería mansory según estándares w3c-->
+    
+    <div class="galeria">
+        <h1>Galería</h1>
+        <hr class="underline">
+        <div class="row"> 
+            <div class="column">
+                <a target="_blank" href="http://lorempixel.com/400/200/people">
+                    <img src="http://lorempixel.com/400/200/people">
+                </a>
+                <a target="_blank" href="http://lorempixel.com/400/300/people">
+                    <img src="http://lorempixel.com/400/300/people">
+                </a>
+                <a target="_blank" href="http://lorempixel.com/400/100/nature">
+                    <img src="http://lorempixel.com/400/100/nature">
+                </a>
+            </div>
+            <div class="column">
+                <a target="_blank" href="http://lorempixel.com/400/150/nature">
+                <img src="http://lorempixel.com/400/150/nature">
+                </a>
+                <a target="_blank" href="http://lorempixel.com/400/150/nature">
+                    <img src="http://lorempixel.com/400/150/nature">
+                </a>
+                <a target="_blank" href="http://lorempixel.com/400/300/people">
+                    <img src="http://lorempixel.com/400/300/people">
+                </a>
+            </div> 
+            <div class="column">
+                <a target="_blank" href="http://lorempixel.com/400/300/people">
+                    <img src="http://lorempixel.com/400/200/people">
+                </a>
+                <a target="_blank" href="http://lorempixel.com/400/300/people">
+                    <img src="http://lorempixel.com/400/200/people">
+                </a>
+                <a target="_blank" href="http://lorempixel.com/400/300/people">
+                    <img src="http://lorempixel.com/400/200/people">
+                </a>
+            </div>
+            <div class="column">
+                <a target="_blank" href="http://lorempixel.com/400/250/nature"></a>
+                    <img src="http://lorempixel.com/400/250/nature">
+                </a>
+                <a target="_blank" href="http://lorempixel.com/400/200/people">
+                    <img src="http://lorempixel.com/400/200/people">
+                </a>
+                <a target="_blank" href="http://lorempixel.com/400/150">
+                    <img src="http://lorempixel.com/400/150">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="franja4"></div>
+
+    <section class="blog">
+        <div class="contenedor">
+            <h1>BLOG</h1>
+            <hr class="underline">
+            <p class="textoBlog"><strong>Haz parte de nuestro tejido</strong> y únete a las historias de las<br> comunidades indígenas de Colombia</p>
+            <div class="fila">
+                <div class="col-4">
+                    <div class="blogThumbnail">
+                        <img src="img/thumbnail-blog.png" alt="">
+                        <div class="tituloBlog">
+                            <h3>HAZ PARTE DE NUESTRO TEJIDO</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="blogThumbnail">
+                        <img src="img/thumbnail-blog.png" alt="">
+                        <div class="tituloBlog">
+                            <h3>HAZ PARTE DE NUESTRO TEJIDO</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="blogThumbnail">
+                        <img src="img/thumbnail-blog.png" alt="">
+                        <div class="tituloBlog">
+                            <h3>HAZ PARTE DE NUESTRO TEJIDO</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center"><a href="#" class="btnBlog">VER TODO</a></p>
+        </div>
+    </section>
+    <div class="franja1"></div>
+    <footer>
+        <div class="contenedor">
+            <div class="footerNaatu">
+                <p class=logoFooter>
+                    <img src="img/naatu-logo-footer.png" alt="">
+                </p>
+                <p>© 2018-20</p>
+                <p><a href="#">NATTU, COLOMBIA</a> - <a href="#">NATTU, COLOMBIA</a> - <a href="#">COOKIES</a> - <a href="#">MENÚ</a> - <a href="#">TÉRMINOS DE USO</a> - <a href="#">FAQS</a> - <a href="#">CONTACTO</a></p>
+                
+                    <p class="redes">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+    <script>
+        function navBuscar() {
+            if (document.getElementById("buscador").classList.contains("activo")){
+                document.getElementById("buscador").classList.remove("activo");
+                document.getElementById("buscarBarraPrincipal").classList.remove("activo");
+            } else {
+                if (document.getElementById("menu").classList.contains("activo")){
+                    document.getElementById("menu").classList.remove("activo");
+                    document.getElementById("hamburguesa").classList.remove("activo");
+                }
+                document.getElementById("buscador").classList.add("activo");
+                document.getElementById("buscarBarraPrincipal").classList.add("activo");
+            } 
+        }
+        function navResponsive() {
+            if (document.getElementById("menu").classList.contains("activo")){
+                document.getElementById("menu").classList.remove("activo");
+                document.getElementById("hamburguesa").classList.remove("activo");
+            } else {
+                if (document.getElementById("buscador").classList.contains("activo")){
+                    document.getElementById("buscador").classList.remove("activo");
+                    document.getElementById("buscarBarraPrincipal").classList.remove("activo");
+                }
+                document.getElementById("menu").classList.add("activo");
+                document.getElementById("hamburguesa").classList.add("activo");
+            }
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1} 
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block"; 
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
