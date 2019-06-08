@@ -138,13 +138,17 @@
         <hr class=underline2>
         <p class="textoProductos">Aprende cocina y aliméntate con nuestras recetas y novedades culinarias</p>
         <div class="sliderRecetas">
-            <ul class="listaSliderRecetas">
+            <ul class="listaSliderRecetas" id="listaSliderRecetas">
                 <li class="receta"></li>
                 <li class="receta"></li>
                 <li class="receta"></li>
                 <li class="receta"></li>
                 <li class="receta"></li>
             </ul>
+            <div class="contenedorFlechas flechasRecetas">
+                <a class="prev" onclick="cambiarSlide(1, false)"><img src="img/left.png" alt="flecha-izquierda"></a>
+                <a class="next" onclick="cambiarSlide(1, true)"><img src="img/right.png" alt="flecha-derecha"></a>
+            </div>
         </div>
     </section>
     <div class="franja3"></div>
@@ -312,6 +316,33 @@
         }
         slides[slideIndex-1].style.display = "block"; 
         dots[slideIndex-1].className += " active";
+        }
+
+        var slideIndexReceta = 0
+        function cambiarSlide(n, booleano) {
+            if (!booleano){
+                slideIndexReceta = slideIndexReceta-n;
+            } else {
+                slideIndexReceta = slideIndexReceta+n;
+            }
+            
+            console.log("vamos a probar"+slideIndexReceta)
+            switch (slideIndexReceta) {
+                case 0, -1:
+                    document.getElementById("listaSliderRecetas").style.marginLeft="-150%";
+                    slideIndexReceta = 3;
+                    break;
+                case 1: 
+                    document.getElementById("listaSliderRecetas").style.marginLeft="-100%";
+                    break;
+                case 2: 
+                    document.getElementById("listaSliderRecetas").style.marginLeft="-150%";
+                    break;
+                case 3:
+                    document.getElementById("listaSliderRecetas").style.marginLeft="0";
+                    slideIndexReceta = 0;
+                    break;
+            }
         }
     </script>
 </body>
