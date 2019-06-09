@@ -402,14 +402,8 @@ h1 {
     width: 250%;
     list-style: none;
 }
-.receta:nth-child(odd) {
+.receta {
     width: 50%;
-    height: 500px;
-    background-color: #009ad8;
-}
-.receta:nth-child(even) {
-    width: 50%;
-    background-color: #0f0;
 }
 .preparaciones {
     padding-top: 50px;
@@ -479,7 +473,16 @@ h1 {
     margin-top: -10px;
     padding: 20px 0;
 }
-.tituloBlog h3 {
+.tituloReceta {
+    width: 90%;
+    background-color: #5b3c3a;
+    color: #ffffff;
+    margin-top: -10px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.tituloBlog h3, .tituloReceta h3 {
     margin-left: 20px;
 }
 
@@ -628,16 +631,20 @@ footer {
     .listaSliderRecetas {
         display: flex;
         padding: 0;
-        width: 166.65%;
+        width: 250%;
         list-style: none;
-    }
-    .receta {
-        width: 33.3%;
     }
     .footerNaatu {
         display: flex;
-        justify-content: space-around;
-        
+        justify-content: space-around; 
+    }
+    .contenedorReceta {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .contenedorReceta img{
+        width: 90%;
     }
     .footerNaatu p {
         margin: 30px;
